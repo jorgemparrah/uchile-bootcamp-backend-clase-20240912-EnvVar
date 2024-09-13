@@ -1,0 +1,11 @@
+services:
+  node-app:
+    image: node:22-alpine3.19
+    working_dir: /usr/src/app
+    environment:
+      - ARCHIVO_ENV=${ARCHIVO}
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:${PUERTO}"
+    command: "yarn start:dev"

@@ -1,0 +1,7 @@
+services:
+  node-app:
+    image: entorno:latest
+    environment:
+      - ARCHIVO_ENV=.develop
+    ports:
+      - "3000:8000"
